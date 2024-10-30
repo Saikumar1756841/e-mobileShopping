@@ -7,7 +7,7 @@ import CartItem from './CartItem'
 function ProductList() {
     const dispatch = useDispatch();
     const [showCart, setShowCart] = useState(false);
-    const [showPlants, setShowPlants] = useState(false); // State to control the visibility of the About Us page
+    const [showphones, setShowphones] = useState(false); // State to control the visibility of the About Us page
     const [addedToCart, setAddedToCart] = useState({});
     const cartItems = useSelector((state) => state.cart.items);
 
@@ -16,7 +16,7 @@ function ProductList() {
     };
     const handleParadiseNurseyClick = () => {
         e.preventDefault();
-        setShowPlants(false);
+        setShowphones(false);
         setShowCart(false);
     };
 
@@ -48,9 +48,9 @@ function ProductList() {
         e.preventDefault();
         setShowCart(true); // Set showCart to true when cart icon is clicked
     };
-    const handlePlantsClick = (e) => {
+    const handlephonesClick = (e) => {
         e.preventDefault();
-        setShowPlants(true); // Set showAboutUs to true when "About Us" link is clicked
+        setShowphones(true); // Set showAboutUs to true when "About Us" link is clicked
         setShowCart(false); // Hide the cart when navigating to About Us
     };
 
@@ -66,212 +66,131 @@ function ProductList() {
         }));
     };
 
-    const plantsArray = [
+    const phonesArray = [
         {
-            category: "Air Purifying Plants",
-            plants: [
+            category: "iphone",
+            phones: [
                 {
-                    name: "Snake Plant",
-                    image: "https://cdn.pixabay.com/photo/2021/01/22/06/04/snake-plant-5939187_1280.jpg",
-                    description: "Produces oxygen at night, improving air quality.",
-                    cost: "$15"
+                    name: "iphone 14 pro",
+                    image: "https://5.imimg.com/data5/SELLER/Default/2023/6/312836839/UK/XE/SQ/4630526/apple-iphone-14-pro-128gb-gold-mobile-phone-500x500.jpg",
+                    description: "Apple Iphone 14 Pro 128GB Gold Mobile Phone ",
+                    cost: "12300"
                 },
                 {
-                    name: "Spider Plant",
-                    image: "https://cdn.pixabay.com/photo/2018/07/11/06/47/chlorophytum-3530413_1280.jpg",
-                    description: "Filters formaldehyde and xylene from the air.",
-                    cost: "$12"
+                    name: "iphone 14",
+                    image: "https://media.croma.com/image/upload/v1708672728/Croma%20Assets/Communication/Mobiles/Images/261934_0_kukyat.png",
+                    description: "Vivid Visuals, Designed with a large 6.1-inch 2532x1170 Super Retina XDR All-Screen OLED screen.",
+                    cost: "5199"
                 },
                 {
-                    name: "Peace Lily",
-                    image: "https://cdn.pixabay.com/photo/2019/06/12/14/14/peace-lilies-4269365_1280.jpg",
-                    description: "Removes mold spores and purifies the air.",
-                    cost: "$18"
+                    name: "iphone 15",
+                    image: "https://assets.sangeethamobiles.com/product_img/14503/1694714823_KSI.jpg",
+                    description: "The Apple iPhone 15 5G comes with a 6.1 inch touchscreen with Crash Detection, features Dynamic Island and a new 48-megapixel main camera with 4x resolution, 20 hours of video playback.",
+                    cost: "6099"
                 },
                 {
-                    name: "Boston Fern",
-                    image: "https://cdn.pixabay.com/photo/2020/04/30/19/52/boston-fern-5114414_1280.jpg",
-                    description: "Adds humidity to the air and removes toxins.",
-                    cost: "$20"
+                    name: "iphone 16 pro",
+                    image: "https://www.bigcmobiles.com/media/catalog/product/cache/e19e56cdd4cf1b4ec073d4305f5db95a/a/p/apple_iphone_16_pro_desert_titanium_-2_2.jpg",
+                    description: "Apple Iphone 16 Pro 256GB Titanium Mobile Phone.",
+                    cost: "12900"
                 },
                 {
-                    name: "Rubber Plant",
-                    image: "https://cdn.pixabay.com/photo/2020/02/15/11/49/flower-4850729_1280.jpg",
-                    description: "Easy to care for and effective at removing toxins.",
-                    cost: "$17"
+                    name: "iphone 14 plus",
+                    image: "https://cdn1.smartprix.com/rx-ibQpWfEfh-w420-h420/apple-iphone-14-plus.jpg",
+                    description: "Super Retina XDR Display, HDR Display, True Tone, Wide Color (P3), Haptic Touch, 1200 Nits Max Brightness (HDR).",
+                    cost: "$6499"
                 },
                 {
-                    name: "Aloe Vera",
-                    image: "https://cdn.pixabay.com/photo/2018/04/02/07/42/leaf-3283175_1280.jpg",
-                    description: "Purifies the air and has healing properties for skin.",
-                    cost: "$14"
+                    name: "iphone 15 pro max",
+                    image: "https://www.imagineonline.store/cdn/shop/files/iPhone_15_Pro_Max_Natural_Titanium_PDP_Image_Position-1__en-IN_817ead95-bff3-4129-866d-3f87976e8be2.jpg?v=1694759321",
+                    description: "a titanium marvel, boasts an aerospace-grade build, making it the lightest Pro model ever.",
+                    cost: "15400"
                 }
             ]
         },
         {
-            category: "Aromatic Fragrant Plants",
-            plants: [
+            category: "IQOO",
+            phones: [
                 {
-                    name: "Lavender",
-                    image: "https://images.unsplash.com/photo-1611909023032-2d6b3134ecba?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                    description: "Calming scent, used in aromatherapy.",
-                    cost: "$20"
+                    name: "IQOO Z7 pro",
+                    image: "https://exstatic-in.iqoo.com/Oz84QB3Wo0uns8j1/in/1693289447445/8ecbff414abfb4d52e5947e33736baf4.png_w860-h860.webp",
+                    description: "Z7 Pro 8GB+128GB Blue Lagoon.",
+                    cost: "2099"
                 },
                 {
-                    name: "Jasmine",
-                    image: "https://images.unsplash.com/photo-1592729645009-b96d1e63d14b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                    description: "Sweet fragrance, promotes relaxation.",
-                    cost: "$18"
+                    name: "iQoo neo pro",
+                    image: "https://exstatic-in.iqoo.com/Oz84QB3Wo0uns8j1/in/1710914304146/9ee4b1ba938e86740fd238ae6c827e2c.png_w860-h860.webp",
+                    description: "Neo9 Pro 8GB+128GB Fiery Red.",
+                    cost: "3399"
                 },
                 {
-                    name: "Rosemary",
-                    image: "https://cdn.pixabay.com/photo/2019/10/11/07/12/rosemary-4541241_1280.jpg",
-                    description: "Invigorating scent, often used in cooking.",
-                    cost: "$15"
+                    name: "iQOO Z9 Lite 5G",
+                    image: "https://exstatic-in.iqoo.com/Oz84QB3Wo0uns8j1/in/1721017033174/b1f00b6e9f2f4bdbe8f5393fd8adbd95.png_w860-h860.webp",
+                    description: "Z9 Lite 5G 4GB+128GB Aqua Flow.",
+                    cost: "1099"
                 },
                 {
-                    name: "Mint",
-                    image: "https://cdn.pixabay.com/photo/2016/01/07/18/16/mint-1126282_1280.jpg",
-                    description: "Refreshing aroma, used in teas and cooking.",
-                    cost: "$12"
+                    name: "iQOO Z9 s",
+                    image: "https://exstatic-in.iqoo.com/Oz84QB3Wo0uns8j1/in/1724143212345/1c4cd1bf5ac2f819332a409620e128bf.png_w860-h860.webp",
+                    description: "Z9s 5G 8GB+128GB Titanium Matte.",
+                    cost: "1999"
                 },
                 {
-                    name: "Lemon Balm",
-                    image: "https://cdn.pixabay.com/photo/2019/09/16/07/41/balm-4480134_1280.jpg",
-                    description: "Citrusy scent, relieves stress and promotes sleep.",
-                    cost: "$14"
+                    name: "iQOO Z6 Lite 5G",
+                    image: "https://exstatic-in.iqoo.com/Oz84QB3Wo0uns8j1/in/1663130037508/b0aa236373a91ad4780710673a6beb18.png_w860-h860.webp",
+                    description: "iQOO Z6 Lite 5G Mystic Night 6GB 128GB 5G.",
+                    cost: "899"
                 },
                 {
-                    name: "Hyacinth",
-                    image: "https://cdn.pixabay.com/photo/2019/04/07/20/20/hyacinth-4110726_1280.jpg",
-                    description: "Hyacinth is a beautiful flowering plant known for its fragrant.",
-                    cost: "$22"
+                    name: "iQOO Z12 5G",
+                    image: "https://cdn1.smartprix.com/rx-i2JF4p5ej-w1200-h1200/2JF4p5ej.jpg",
+                    description: "iQOO 12 5G (16GB RAM + 512GB).",
+                    cost: "5499"
                 }
             ]
         },
         {
-            category: "Insect Repellent Plants",
-            plants: [
+            category: "Realme",
+            phones: [
                 {
-                    name: "oregano",
-                    image: "https://cdn.pixabay.com/photo/2015/05/30/21/20/oregano-790702_1280.jpg",
-                    description: "The oregano plants contains compounds that can deter certain insects.",
-                    cost: "$10"
+                    name: "realme c35",
+                    image: "https://www.jiomart.com/images/product/original/492849559/realme-c35-64-gb-4-gb-ram-glowing-green-mobile-phone-digital-o492849559-p591223038-0-202204202315.jpeg?im=Resize=(420,420)",
+                    description: "Realme C35 64 GB, 4 GB RAM, Glowing Green, Mobile Phone.",
+                    cost: "899"
                 },
                 {
-                    name: "Marigold",
-                    image: "https://cdn.pixabay.com/photo/2022/02/22/05/45/marigold-7028063_1280.jpg",
-                    description: "Natural insect repellent, also adds color to the garden.",
-                    cost: "$8"
+                    name: "realme p1 5G",
+                    image: "https://cdn1.smartprix.com/rx-i1wcdnFsO-w420-h420/realme-p1-5g.jpg",
+                    description: "50 MP + 2 MP Dual Rear Camera.",
+                    cost: "1448"
                 },
                 {
-                    name: "Geraniums",
-                    image: "https://cdn.pixabay.com/photo/2012/04/26/21/51/flowerpot-43270_1280.jpg",
-                    description: "Known for their insect-repelling properties while adding a pleasant scent.",
-                    cost: "$20"
+                    name: "realme 12 pro plus",
+                    image: "https://images.jdmagicbox.com/quickquotes/images_main/12-pro-5g-ram-8-gb-128-gb-navigator-beige-58-272750111-1kmke6pu.jpg",
+                    description: "Rear Camera : 64MP Periscope Portrait Camera, OmniVision OV64B sensor.",
+                    cost: "2999"
                 },
                 {
-                    name: "Basil",
-                    image: "https://cdn.pixabay.com/photo/2016/07/24/20/48/tulsi-1539181_1280.jpg",
-                    description: "Repels flies and mosquitoes, also used in cooking.",
-                    cost: "$9"
+                    name: "realme c55",
+                    image: "https://www.valueplusretail.com/cdn/shop/files/RealmeC55_Sunshower8GB_128GB_5.jpg?v=1696940925",
+                    description: " 17.07 cm (6.72 Inch) FHD+ Display * 64 MP, 2 MP Rear Camera * 8 MP Selfie Camera * 4 GB Memory, 64 GB Storage * 5000 mAh Battery.",
+                    cost: "1099"
                 },
                 {
-                    name: "Lavender",
-                    image: "https://images.unsplash.com/photo-1611909023032-2d6b3134ecba?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                    description: "Calming scent, used in aromatherapy.",
-                    cost: "$20"
+                    name: "realme c53",
+                    image: "https://rukminim1.flixcart.com/image/900/900/xif0q/mobile/h/h/d/-original-imags487gaqqhcea.jpeg?q=90",
+                    description: "he phone comes with a 90 Hz refresh rate 6.74-inch touchscreen display at a pixel density of 560 pixels per inch (ppi). .",
+                    cost: "700"
                 },
                 {
-                    name: "Catnip",
-                    image: "https://cdn.pixabay.com/photo/2015/07/02/21/55/cat-829681_1280.jpg",
-                    description: "Repels mosquitoes and attracts cats.",
-                    cost: "$13"
+                    name: "realme 11 5g",
+                    image: "https://rukminim2.flixcart.com/image/720/864/xif0q/mobile/g/j/d/-original-imagtqqddnkayg4x.jpeg?q=60&crop=false",
+                    description: "8 GB RAM | 256 GB ROM | Expandable Upto 2 TB.",
+                    cost: "1399"
                 }
             ]
         },
-        {
-            category: "Medicinal Plants",
-            plants: [
-                {
-                    name: "Aloe Vera",
-                    image: "https://cdn.pixabay.com/photo/2018/04/02/07/42/leaf-3283175_1280.jpg",
-                    description: "Soothing gel used for skin ailments.",
-                    cost: "$14"
-                },
-                {
-                    name: "Echinacea",
-                    image: "https://cdn.pixabay.com/photo/2014/12/05/03/53/echinacea-557477_1280.jpg",
-                    description: "Boosts immune system, helps fight colds.",
-                    cost: "$16"
-                },
-                {
-                    name: "Peppermint",
-                    image: "https://cdn.pixabay.com/photo/2017/07/12/12/23/peppermint-2496773_1280.jpg",
-                    description: "Relieves digestive issues and headaches.",
-                    cost: "$13"
-                },
-                {
-                    name: "Lemon Balm",
-                    image: "https://cdn.pixabay.com/photo/2019/09/16/07/41/balm-4480134_1280.jpg",
-                    description: "Calms nerves and promotes relaxation.",
-                    cost: "$14"
-                },
-                {
-                    name: "Chamomile",
-                    image: "https://cdn.pixabay.com/photo/2016/08/19/19/48/flowers-1606041_1280.jpg",
-                    description: "Soothes anxiety and promotes sleep.",
-                    cost: "$15"
-                },
-                {
-                    name: "Calendula",
-                    image: "https://cdn.pixabay.com/photo/2019/07/15/18/28/flowers-4340127_1280.jpg",
-                    description: "Heals wounds and soothes skin irritations.",
-                    cost: "$12"
-                }
-            ]
-        },
-        {
-            category: "Low Maintenance Plants",
-            plants: [
-                {
-                    name: "ZZ Plant",
-                    image: "https://images.unsplash.com/photo-1632207691143-643e2a9a9361?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                    description: "Thrives in low light and requires minimal watering.",
-                    cost: "$25"
-                },
-                {
-                    name: "Pothos",
-                    image: "https://cdn.pixabay.com/photo/2018/11/15/10/32/plants-3816945_1280.jpg",
-                    description: "Tolerates neglect and can grow in various conditions.",
-                    cost: "$10"
-                },
-                {
-                    name: "Snake Plant",
-                    image: "https://cdn.pixabay.com/photo/2021/01/22/06/04/snake-plant-5939187_1280.jpg",
-                    description: "Needs infrequent watering and is resilient to most pests.",
-                    cost: "$15"
-                },
-                {
-                    name: "Cast Iron Plant",
-                    image: "https://cdn.pixabay.com/photo/2017/02/16/18/04/cast-iron-plant-2072008_1280.jpg",
-                    description: "Hardy plant that tolerates low light and neglect.",
-                    cost: "$20"
-                },
-                {
-                    name: "Succulents",
-                    image: "https://cdn.pixabay.com/photo/2016/11/21/16/05/cacti-1846147_1280.jpg",
-                    description: "Drought-tolerant plants with unique shapes and colors.",
-                    cost: "$18"
-                },
-                {
-                    name: "Aglaonema",
-                    image: "https://cdn.pixabay.com/photo/2014/10/10/04/27/aglaonema-482915_1280.jpg",
-                    description: "Requires minimal care and adds color to indoor spaces.",
-                    cost: "$22"
-                }
-            ]
-        }
+        
     ];
     const styleObj = {
         backgroundColor: '#4CAF50',
@@ -299,35 +218,35 @@ function ProductList() {
             <div className="navbar" style={styleObj}>
                 <div className="tag">
                     <div className="luxury">
-                        <img  class="im" src="https://cdn.pixabay.com/photo/2020/08/05/13/12/eco-5465432_1280.png" alt="" />
-                        <a href="/e-plantShopping/" style={{ textDecoration: 'none' }} onClick={(e) => handleParadiseNurseyClick(e)}>
+                        <img  class="im" src="https://th.bing.com/th?id=OIP.tOLYVDEfVbhJpvGC235B6gHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="" />
+                        <a href="/" style={{ textDecoration: 'none' }} onClick={(e) => handleParadiseNurseyClick(e)}>
                             <div>
-                                <h3 style={{ color: 'white' }}>Paradise Nursery</h3>
-                                <i style={{ color: 'white' }}>Where Green Meets Serenity</i>
+                                <h3 style={{ color: 'white' }}>Mobiles store</h3>
+                                <i style={{ color: 'white' }}>Where Price meets Quality</i>
                             </div>
                         </a>
                     </div>
 
                 </div>
                 <div style={styleObjUl}>
-                    <div> <a href="#" onClick={(e) => handlePlantsClick(e)} style={styleA}>Plants</a></div>
+                    <div> <a href="#" onClick={(e) => handlephonesClick(e)} style={styleA}>phones</a></div>
                     <div> <a href="#" onClick={(e) => handleCartClick(e)} style={styleA}><h1 className='cart'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="IconChangeColor" height="68" width="68"><rect width="156" height="156" fill="none"></rect><circle cx="80" cy="216" r="12"></circle><circle cx="184" cy="216" r="12"></circle><path d="M42.3,72H221.7l-26.4,92.4A15.9,15.9,0,0,1,179.9,176H84.1a15.9,15.9,0,0,1-15.4-11.6L32.5,37.8A8,8,0,0,0,24.8,32H8" fill="none" stroke="#faf9f9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" id="mainIconPathAttribute"></path></svg><div className='cart_quantity_count'>{totalQuantity}</div></h1></a></div>
                 </div>
             </div>
             {!showCart ? (
                 <div className="product-grid">
-                    {plantsArray.map((category, index) => (
+                    {phonesArray.map((category, index) => (
                         <div key={index}>
                             <h1><div>{category.category}</div></h1>
                             <div className="product-list">
-                                {category.plants.map((plant, plantIndex) => (
-                                    <div className="product-card" key={plantIndex}>
-                                        <img className="product-image" src={plant.image} alt={plant.name} />
-                                        <div className="product-title">{plant.name}</div>
-                                        <div className="product-description">{plant.description}</div>
-                                        <div className="product-cost">{plant.cost}</div>
-                                        {/*Similarly like the above plant.name show other details like description and cost*/}
-                                        <button className="product-button" onClick={() => handleAddToCart(plant)} disabled={checkDisabled(plant.name)}>{checkDisabled(plant.name)?"Added":"Add"} to Cart</button>
+                                {category.phones.map((phone, phoneIndex) => (
+                                    <div className="product-card" key={phoneIndex}>
+                                        <img className="product-image" src={phone.image} alt={phone.name} />
+                                        <div className="product-title">{phone.name}</div>
+                                        <div className="product-description">{phone.description}</div>
+                                        <div className="product-cost">{phone.cost}</div>
+                                        {/*Similarly like the above phone.name show other details like description and cost*/}
+                                        <button className="product-button" onClick={() => handleAddToCart(phone)} disabled={checkDisabled(phone.name)}>{checkDisabled(phone.name)?"Added":"Add"} to Cart</button>
                                     </div>
                                 ))}
                             </div>

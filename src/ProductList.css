@@ -10,7 +10,7 @@ body {
     background-color: #f0f0f0;
 }
 .im{
-    width: 90%%;
+    width: 90%;
 }
 
 /* Navbar */
@@ -175,13 +175,13 @@ body {
     font-size: 29px;
 
 }
-.plantname_heading{
+.phonename_heading{
    display: flex;
    align-items: center;
    justify-content: center;
     /* background-color: yellow; */
 }
-.plant_heading{
+.phone_heading{
     width: 400px;
     text-align: center;
     margin: 20px;
